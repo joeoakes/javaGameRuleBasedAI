@@ -3,6 +3,10 @@ Java Rule-Based AI Game Demo
 One player controlled by arrow keys
 One enemy that makes decisions every frame based on rule-based AI
 It has a basic game loop, and a simple enemy AI that patrols, chases, attacks, or flees based on its state.
+Enemy patrols unless:
+It sees the player → chases
+It's near the player → attacks
+It’s low on health (<30) → flees
  */
 
 import javax.swing.*;
