@@ -1,5 +1,7 @@
 /*
 Java Rule-Based AI Game Demo
+A Rule-Based System (RBS) is a type of AI that uses predefined rules to make decisions or solve problems.
+It mimics human decision-making by applying logical IF-THEN rules to a knowledge base.
 One player controlled by arrow keys
 One enemy that makes decisions every frame based on rule-based AI
 It has a basic game loop, and a simple enemy AI that patrols, chases, attacks, or flees based on its state.
@@ -64,6 +66,7 @@ public class RuleBasedGame extends JPanel implements KeyListener, Runnable {
         int dy = playerY - enemyY;
         double distance = Math.sqrt(dx * dx + dy * dy);
 
+        //Flee from player
         if (enemyHealth < 30) {
             // Flee logic
             if (distance < 200) {
