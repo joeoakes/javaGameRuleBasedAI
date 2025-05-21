@@ -61,7 +61,7 @@ public class RuleBasedGame extends JPanel implements KeyListener, Runnable {
         if (keys[KeyEvent.VK_UP]) playerY -= 5;
         if (keys[KeyEvent.VK_DOWN]) playerY += 5;
 
-        // AI Decision
+        // AI Decision: decide what to do based on how far away the player is
         //Calculates the horizontal (x-axis) distance between the player and enemy.
         int dx = playerX - enemyX; //Positive if the player is to the right, negative if to the left.
 
