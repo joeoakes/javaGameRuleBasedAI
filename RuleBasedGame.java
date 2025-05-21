@@ -62,8 +62,11 @@ public class RuleBasedGame extends JPanel implements KeyListener, Runnable {
         if (keys[KeyEvent.VK_DOWN]) playerY += 5;
 
         // AI Decision
-        int dx = playerX - enemyX;
-        int dy = playerY - enemyY;
+        //Calculates the horizontal (x-axis) distance between the player and enemy.
+        int dx = playerX - enemyX; //CPositive if the player is to the right, negative if to the left.
+        //Calculates the vertical (y-axis) distance between the player and enemy.
+        int dy = playerY - enemyY;  //Positive if the player is below, negative if above.
+        //Uses the Pythagorean theorem to compute the straight-line (Euclidean) distance between the two points:
         double distance = Math.sqrt(dx * dx + dy * dy);
 
         //Flee from player
